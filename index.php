@@ -62,7 +62,7 @@ echo "<br>";
 
 //Bucle foreach para arreglo indexado  en valor
 
-echo "En VALOR";
+echo "En VALOR ";
 $arreglo= array("Santiago", "Andres", "Maria", "Emilio", "Carolina");
 foreach($arreglo as $clave=>$valor){
     echo "<br> La CLAVE del cajon es: " . $clave;
@@ -71,6 +71,17 @@ foreach($arreglo as $clave=>$valor){
 }
 echo "<br>*********************************************************************";
 echo "<br>";
+
+
+// Arrelgos multidimensionales en php
+
+$usuarios= array (
+    'usuario1'=> array('Nombre'=>"Santiago", 'Edad'=>30, 'Genero'=>"M"),
+    'usuario2'=> array('Nombre'=>"Carolina", 'Edad'=>40, 'Genero'=>"F"),
+    'usuario3'=> array('Nombre'=>"Juliana", 'Edad'=>36, 'Genero'=>"F"),
+    'usuario4'=> array('Nombre'=>"Yamilie", 'Edad'=>65, 'Genero'=>"F")
+
+);
 
 
 
