@@ -1,4 +1,8 @@
 <?php
+
+include('funciones.php');
+
+
 $clase1 = "Clase 4 bucles, arreglos y funciones";
 echo $clase1;
 
@@ -48,7 +52,7 @@ for($x =0; $x < count($arreglo); $x++){
 echo "<br>*********************************************************************";
 echo "<br>";
 
-//Bucle FOREACH
+//Bucle FOREACH arreglo 
 
 $arreglo= array('usuario1'=>"Santiago", 'usuario2'=> "Andres", 'usuario3'=>"Maria", 'usuario4'=>"Emilio");
 
@@ -76,15 +80,54 @@ echo "<br>";
 // Arrelgos multidimensionales en php
 
 $usuarios= array (
-    'usuario1'=> array('Nombre'=>"Santiago", 'Edad'=>30, 'Genero'=>"M"),
-    'usuario2'=> array('Nombre'=>"Carolina", 'Edad'=>40, 'Genero'=>"F"),
-    'usuario3'=> array('Nombre'=>"Juliana", 'Edad'=>36, 'Genero'=>"F"),
-    'usuario4'=> array('Nombre'=>"Yamilie", 'Edad'=>65, 'Genero'=>"F")
+    'usuario1'=> array('<strong>Nombre</strong>'=>"Santiago", '<strong>Edad</strong>'=>30, '<strong>Genero</strong>'=>"M"),
+    'usuario2'=> array('<strong>Nombre</strong>'=>"Carolina", '<strong>Edad</strong>'=>40, '<strong>Genero</strong>'=>"F"),
+    'usuario3'=> array('<strong>Nombre</strong>'=>"Juliana", '<strong>Edad</strong>'=>36, '<strong>Genero</strong>'=>"F"),
+    'usuario4'=> array('<strong>Nombre</strong>'=>"Yamilie", '<strong>Edad</strong>'=>65, '<strong>Genero</strong>'=>"F")
 
 );
 
+echo "<br>*********************************************************************";
+echo "<br>";
+
+print_r($usuarios);
 
 
+//ciclos foeach para acceder a los elementos del arreglo multidimencinales
+
+echo "<br>*********************************************************************";
+echo "<br>";
+
+foreach($usuarios as $clavesArreglosUnidi =>$arreglosUnidi){
+    echo($clavesArreglosUnidi);
+    echo "<br>";
+    print_r($arreglosUnidi);
+    echo "<br>";
+    foreach($arreglosUnidi as $claves=>$valores){
+    
+        echo($claves." : ");
+        echo($valores);
+        echo "<br>";
+    }
+
+}
+
+//calcular la edad de dos personas
+
+echo "<br>*********************************************************************";
+echo "<br>";
+calcularEdad(1955);
+echo "<br>";
+calcularEdad2(1988, 2020);
+$edad3=calcularEdad3(1999, 2020);
+echo "<br>";
+echo("La edad de la persoan es: " . $edad3);
+
+
+//Arreglo que se llena con una funcion 
+
+$edades=array('edad1'=> calcularEdad3(2020,1999), 'edad2'=>calcularEdad3(2020,1991));
+print_r($edades);
 
 
 ?>
